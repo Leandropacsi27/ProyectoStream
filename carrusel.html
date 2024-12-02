@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrusel con Botones</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .carrusel {
+            width: 1200px;
+            height: 600px;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+        }
+
+        .imagenes {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .imagenes img {
+            width: 1200px;
+            height: 600px;
+            object-fit: cover;
+        }
+
+        .boton {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            z-index: 10;
+            font-size: 18px;
+        }
+
+        .boton:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .boton.izquierda {
+            left: 10px;
+        }
+
+        .boton.derecha {
+            right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="carrusel">
+        <button class="boton izquierda" onclick="moverIzquierda()">⟨</button>
+        <div class="imagenes" id="imagenes">
+            <img src="https://via.placeholder.com/1200x600/FF5733/FFFFFF" alt="Imagen 1">
+            <img src="https://via.placeholder.com/1200x600/33FF57/FFFFFF" alt="Imagen 2">
+            <img src="https://via.placeholder.com/1200x600/3357FF/FFFFFF" alt="Imagen 3">
+        </div>
+        <button class="boton derecha" onclick="moverDerecha()">⟩</button>
+    </div>
+
+    <script>
+        const imagenes = document.getElementById('imagenes');
+        const totalImagenes = document.querySelectorAll('.imagenes img').length;
+        let indiceActual = 0;
+
+        function moverDerecha() {
+            indiceActual = (indiceActual + 1) % totalImagenes;
+            actualizarCarrusel();
+        }
+
+        function moverIzquierda() {
+            indiceActual = (indiceActual - 1 + totalImagenes) % totalImagenes;
+            actualizarCarrusel();
+        }
+
+        function actualizarCarrusel() {
+            const desplazamiento = -indiceActual * 1200;
+            imagenes.style.transform = `translateX(${desplazamiento}px)`;
+        }
+    </script>
+
+</body>
+
+</html>
