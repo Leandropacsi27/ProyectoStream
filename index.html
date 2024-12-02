@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamsUTP</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="contenedor-header" id="inicio">
+        <header>
+            <div class="logo">
+                <a href="#">StreamsUTP</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html"  onclick="seleccionar()">INICIO</a></li>
+                    <li><a href="ingreso.html" onclick="seleccionar()">INGRESA</a></li>
+                    <li><a href="registro.html" onclick="seleccionar()">SUSCRIBETE AHORA</a></li>
+                    <li><a href="nosotros.html" onclick="seleccionar()">SOBRE NOSOTROS</a></li>
+                    <li><a href="index.html#contactos" onclick="seleccionar()">CONTACTENOS</a></li>
+
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+    <div class="back-carru">
+        <div class="carrusel">
+            <div class="imagenes" id="imagenes">
+                <img src="/imagenes/carrusel1.jpg" alt="Imagen 1">
+                <img src="/imagenes/carrusel2.webp" alt="Imagen 2">
+                <img src="/imagenes/carrusel3.jpg" alt="Imagen 3">
+            </div>
+            <button id="btnIzquierda">⟨</button>
+            <button id="btnDerecha">⟩</button>
+        </div>
+    </div>
+
+<script>
+    
+</script>
+
+
+
+    <main>
+        <section class="offers">
+            <h2>Ofertas Exclusivas</h2>
+            <div class="offer-grid">
+                <div class="offer-item">
+                    <h3>Plan Estándar</h3>
+                    <p>¡Obtén acceso a todo el catálogo por solo s/.19.99 al mes!</p>
+                    <a href="registro.html?plan=estandar" class="plan-link">Seleccionar Plan Estándar</a>
+                </div>
+                <div class="offer-item">
+                    <h3>Plan Premium</h3>
+                    <p>¡Disfruta de contenido en 4K y sin anuncios por solo s/.29.99 al mes!</p>
+                    <a href="registro.html?plan=premium" class="plan-link">Seleccionar Plan Premium</a>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="image-grid">
+            <h2>Unase hoy y empieze a disfrutar de películas como:</h2>
+
+            <div class="grid-container">
+                <div class="grid-item">
+                    <img src="imagenes/cuadricula/1.jpg" alt="Ironman 3">
+                    <p>Ironman 3</p>
+                </div>
+                <div class="grid-item">
+                    <img src="imagenes/cuadricula/2.jpg" alt="Thor 4">
+                    <p>Thor: Love and Thunder</p>
+                </div>
+                <div class="grid-item">
+                    <img src="imagenes/cuadricula/3.jpg" alt="Thor 3">
+                    <p>Thor: Ragnarok</p>
+                </div>
+                <div class="grid-item">
+                    <img src="imagenes/cuadricula/4.jpg" alt="RE">
+                    <p>Resident Evil: Welcome to Raccon City</p>
+                </div>
+                <div class="grid-item">
+                    <img src="imagenes/cuadricula/5.jpg" alt="Avengers:End Game">
+                    <p>Avengers: End Game</p>
+                </div>
+                <div class="grid-item">
+                    <img src="imagenes/cuadricula/6.jpg" alt="Descripción de imagen 6">
+                    <p>Texto de la imagen 6</p>
+                </div>
+                <div class="grid-item">
+                    <img src="imagenes/cuadricula/7.jpg" alt="The Batman">
+                    <p>The Batman</p>
+                </div>
+                <div class="grid-item">
+                    <img src="imagenes/cuadricula/8.jpg" alt="">
+                    <p>StarWars: Rogue One</p>
+                </div>
+                <div class="grid-item">
+                    <img src="imagenes/cuadricula/9.jpg" alt="">
+                    <p>Venom: Lets Be Carnage</p>
+                </div>
+                <div class="grid-item">
+                    <img src="imagenes/cuadricula/10.jpg" alt="">
+                    <p>Venom</p>
+                </div>
+                <div class="grid-item">
+                    <img src="imagenes/cuadricula/11.jpg" alt="">
+                    <p>Spider-Man: No Way Home</p>
+                </div>
+                <div class="grid-item">
+                    <img src="imagenes/cuadricula/12.jpg" alt="">
+                    <p>Avengers: Infinity Wars</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="form-container" id="contactos">>
+        <div class="contact-info">
+            <h2>Contáctenos</h2>
+            <p>Ante cualquier duda o consulta. Comuníquese con nosotros al siguiente número:
+                (+51)777-777-777 .</p>
+            <p>O escríbamos a nuestro correo electrónico: @utp.edu.pe</p>
+        </div>
+    </footer>
+    <br>
+    <section class="redes">
+        <div class="contenido-redes">
+            <div class="redes">
+                <a href="https://www.google.com/"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.google.com/"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.google.com/"><i class="fa-solid fa-rss"></i></a>
+                <a href="https://www.google.com/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#inicio"><i class="fa-solid fa-arrow-up"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
