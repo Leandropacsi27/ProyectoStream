@@ -1,4 +1,5 @@
-const imagenes = document.getElementById('imagenes');
+document.addEventListener('DOMContentLoaded', function() {
+    const imagenes = document.getElementById('imagenes');
     const totalImagenes = document.querySelectorAll('#imagenes > img').length;
     let indiceActual = 0;
 
@@ -23,51 +24,37 @@ const imagenes = document.getElementById('imagenes');
         const desplazamiento = -indiceActual * 100;
         imagenes.style.transform = `translateX(${desplazamiento}%)`;
     }
-
+});
 
 
 let menuVisible = false;
-// Funcion que oculta o muestra el menu
 function mostrarOcultarMenu() {
-    if (menuVisible){
-        document.getElementById("nav").classList ="";
-        menuVisible = false;
-    }else{
-        document.getElementById("nav").classList="responsive";
-        menuVisible = true;
-    }
+    const nav = document.getElementById("nav");
+    nav.classList.toggle("responsive");  // Alterna la clase 'responsive' para mostrar/ocultar el menú
+    menuVisible = !menuVisible;
 }
+
+
+
 function seleccionar() {
-    // oculta el menu una vez que selecciono una opcion
-    document.getElementById.classList = "";
+    document.getElementById("nav").classList.remove("responsive");  // Elimina la clase 'responsive' cuando se selecciona una opción
     menuVisible = false;
 }
 
-
-//Funcion para capturar el plan que se hizo click en el index y se pasa al url
 const urlParams = new URLSearchParams(window.location.search);
 const plan = urlParams.get('plan');
-
-//Si el parámetro "plan" exixte se selecciona ese.
 if (plan) {
     const planSelect = document.getElementById('plan');
-    planSelect.value = plan;
+    planSelect.value = plan;  // Si existe el parámetro "plan", lo selecciona en el formulario
 }
 
-//Funcion al enviar el formulario de regristo correctamente
-document.querySelector('.form-container-registro form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    alert("¡Gracias por unirte a nosotros!. En breve se enviará un mensaje a tu correo");
-    this.reset(); // Limpiar el formulario después de enviarlo
-});S
 
-//Funcion para desplazarse a anclas de forma suave
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
 
         document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+            behavior: 'smooth'  // Desplazamiento suave al hacer clic en anclas
         });
     });
 });
