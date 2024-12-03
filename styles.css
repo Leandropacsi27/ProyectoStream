@@ -366,7 +366,7 @@ section{
 
 /* carrusel */
 .back-carru{
-    background-image: url('/imagenes/backgroundcarrusel.gif');
+    background-image: url('imagenes/backgroundcarrusel.gif');
 }
 
 .carrusel {
