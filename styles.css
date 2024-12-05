@@ -73,56 +73,6 @@ html {
 }
 
 
-/* Estilos del banner */
-.banner {
-    display: flex;
-    align-items: center;
-    justify-content: stretch ; /* Espacio entre la imagen y el aside */
-}
-
-.banner-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.banner h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.banner img {
-    display: flex;
-    width: 80%; /* Ancho responsivo */
-    border-radius: 10px;
-}
-
-/* Estilos del aside */
-aside {
-    padding: 20px;
-    background-color: #000000;
-    margin-left: 10px; /* Espacio entre la imagen y el aside */
-    border-radius: 5px;
-    width: 250px; /* Ancho fijo para el aside */
-}
-
-aside h3 {
-    margin-bottom: 10px;
-}
-
-aside ul {
-    list-style-type: none;
-}
-
-aside ul li {
-    margin: 10px 0;
-}
-
-aside ul li a {
-    text-decoration: none;
-    color: #007BFF;
-}
 
 /* Estilos de las ofertas */
 .offers {
@@ -130,58 +80,102 @@ aside ul li a {
     background-color: #1a1a1a;
     color: white;
     text-align: center;
+    font-size: 35px;
+    color: rgba(255, 0, 0, 0.7);
+    text-transform: uppercase;
 }
 
 .offer-grid {
     display: flex;
-    justify-content: space-around;
     margin-top: 20px;
+    font-size: 22px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+
 }
 
 .offer-item {
     background-color: #333;
     padding: 15px;
     border-radius: 10px;
-    width: 30%;
+    width: 600px;
 }
 
 .offer-item h3 {
     color: #fffefe;
     margin-bottom: 10px;
+    font-size: 30px;
+    
 }
 
 .offer-item p {
     color: white;
+    padding: 20px 0;
 }
 /*Estilo para el link del plan */
 .plan-link {
+    font-size: 25px;
     color: #FF6347; 
     text-decoration: none; /* Elimina subrayado */
+
 }
+.plan-link:hover{
+    text-decoration: underline;
+} 
 
 /* Estilos para la cuadrícula de imágenes */
+
+
 .image-grid {
-    padding: 20px;
+    padding: 70px 100px;
     text-align: center;
     background-color: #1a1a1a;
     color: white;
-}
+    font-size: 25px;
 
+}
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
-    grid-template-rows: repeat(4, auto); /* Cuatro filas, ajustadas automáticamente */
-    gap: 20px; /* Espacio entre elementos de la cuadrícula */
-    margin-top: 20px;
+    grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
+    gap: 40px;
+    justify-content: center;
+    margin-top: 50px;
+    
+}
+
+@keyframes reveal {
+    from{
+        opacity: 0;
+        translate: 0 100px;
+        scale: .8;
+    }
+
+    to{
+        opacity: 1;
+        translate: 0 0;
+
+    }
 }
 
 .grid-item {
-    background-color: #333;
     border-radius: 10px;
-    padding: 10px;
+    padding: 20px;
+    background: rgba(255, 0, 0, 0.1);
+    animation: reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 60%;
+    
+}
+
+.grid-item:hover{
+    border: 2px solid white;
+    transform: scale(1.05);
+    transition: .3s;
 }
 
 .grid-item img {
+    margin-top: 30px;
     width: 80%; /* Ancho responsivo */
     height: auto; /*Mantiene proporcion de imagen*/
     border-radius: 5px;
@@ -380,7 +374,7 @@ section{
 }
 
 .imagenes {
-    padding: 10px 0;
+  padding: 50px 0;
   display: flex;
   transition: transform 0.5s ease-in-out;
 }
@@ -397,8 +391,11 @@ section{
   background: rgba(0, 0, 0, 0.7);
   color: white;
   border: none;
-  padding: 10px;
+  padding: 60px 15px;
   cursor: pointer;
+}
+#btnIzquierda:hover, #btnDerecha:hover{
+    color: red;
 }
 
 #btnIzquierda {
