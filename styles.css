@@ -365,8 +365,8 @@ section{
 }
 
 /* carrusel */
-.back-carru{
-    background-image: url('imagenes/backgroundcarrusel.gif');
+.back-carru{   
+    background-image: url('./imagenes/backgroundcarrusel.gif');
 }
 
 .carrusel {
@@ -377,9 +377,6 @@ section{
   position: relative;
   overflow: hidden;
   border: 1px solid #000;
-
- 
-
 }
 
 .imagenes {
